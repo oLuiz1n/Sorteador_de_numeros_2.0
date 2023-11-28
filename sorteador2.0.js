@@ -7,7 +7,13 @@ quantidade.focus();
 botao.onclick = () => {
     if(quantidade.value == '' && primeiroNumero.value == '' && segundoNumero.value == ''){
         alert('Coloque a quantidade e os numeros que você quer sortear')
-    } else {
+    } else if (quantidade.value == quantidade.value && primeiroNumero.value == '' && segundoNumero.value == ''){
+        alert('coloque os numeros que quer sortear')
+    }else if (quantidade.value == quantidade.value && primeiroNumero.value == primeiroNumero.value && segundoNumero.value == ''){
+        alert('coloque o segundo numero')
+    }else if (quantidade.value == '' && primeiroNumero.value == primeiroNumero.value && segundoNumero.value == segundoNumero.value){
+        alert('Coloque a quantidade de numeros que voce quer')
+    }else {
     resposta.innerHTML =  sorteioNumero(quantidade.value);
     createButton()
     }
