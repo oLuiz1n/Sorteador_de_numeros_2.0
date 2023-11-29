@@ -31,3 +31,6 @@ body {
     font-size: 13px;
     cursor: pointer;
  }
+ .numeros_sorteados {
+    text-align: auto;
+ }
