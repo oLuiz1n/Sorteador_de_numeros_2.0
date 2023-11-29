@@ -1,10 +1,15 @@
 let quantidade = document.querySelector('.quantidade');
 let primeiroNumero = document.querySelector('.de');
 let segundoNumero = document.querySelector('.a');
-let resposta = document.querySelector('.numeros_sorteados');
+let resposta = document.querySelector('p');
 let botao = document.querySelector('.sorteador');
 quantidade.focus();
 botao.onclick = () => {
+    if (quantidade.value > sorteio()) {
+        alert('A quantidade de numeros é maior do que o esperado');
+        let reiniciar = location.reload();
+        return reiniciar;
+    }
     if(quantidade.value == '' && primeiroNumero.value == '' && segundoNumero.value == ''){
         alert('Coloque a quantidade e os numeros que você quer sortear')
     } else if (quantidade.value == quantidade.value && primeiroNumero.value == '' && segundoNumero.value == ''){
@@ -48,7 +53,7 @@ createButton = () => {
     let botao_reinicio = document.querySelector('.reiniciar');
     botao_reinicio.innerHTML = 'Reiniciar'
     botao_reinicio.onclick = () => {
-        let reiniciar = location.reload()
+        let reiniciar = location.reload();
         return reiniciar;
     }
 }
