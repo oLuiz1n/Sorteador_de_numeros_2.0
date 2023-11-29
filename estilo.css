@@ -36,5 +36,5 @@ body {
     width: auto;
     padding: auto;
     text-align: center;
-    word-break: break-all ;
+    word-break: break-word ;
  }

@@ -5,7 +5,8 @@ let resposta = document.querySelector('p');
 let botao = document.querySelector('.sorteador');
 quantidade.focus();
 botao.onclick = () => {
-    if (quantidade.value > sorteio()) {
+    console.log(sorteio())
+    if (quantidade.value > (parseInt(segundoNumero.value) - parseInt(primeiroNumero.value) + 1) + parseInt(primeiroNumero.value)) {
         alert('A quantidade de numeros é maior do que o esperado');
         let reiniciar = location.reload();
         return reiniciar;
@@ -47,7 +48,7 @@ sorteioNumero = (quantidade) => {
             }
         }
     }
-    return incluidos;
+    return incluidos.join('  ');
 }
 createButton = () => {
     let botao_reinicio = document.querySelector('.reiniciar');
